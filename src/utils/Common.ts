@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { expect, Page } from '@playwright/test';
 import AzureDevOps from '../../src/utils/AzureDevOpsHelper';
 import * as fs from 'fs';
 import { TestReport } from '../../src/interface/TestResults.interface';
@@ -101,6 +101,24 @@ async function waitForFile(filePath: string) {
     console.log(`File ${filePath} is now available!`);
 }
 
+/**
+ * Author: Testers Talk
+ */
 export async function updateTestCaseStatusInTestPlan() {
     await readJsonReport();
+}
+
+/**
+ * Author: Testers Talk
+ */
+export async function loginToApplication(page: Page) {
+    await page.goto('https://bakkappan.github.io/Testers-Talk-Practice-Site');
+    await expect(page.locator('#siteHeader')).toContainText('Testers Talk: A Practice Space for Passionate QA Minds');
+    await page.getByPlaceholder('Username').click();
+    await page.getByPlaceholder('Username').fill('TestersTalk');
+    await page.getByPlaceholder('Password').click()
+    await page.getByPlaceholder('Password').fill('TestersTalk');
+    await page.getByRole('button', { name: 'Login' }).click();
+    await expect(page.getByText('Welcome to Testers Talk!')).toBeVisible();
+    await expect(page.locator('#welcomeMsg')).toContainText('Welcome to Testers Talk!');
 }

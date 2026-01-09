@@ -122,3 +122,26 @@ export async function loginToApplication(page: Page) {
     await expect(page.getByText('Welcome to Testers Talk!')).toBeVisible();
     await expect(page.locator('#welcomeMsg')).toContainText('Welcome to Testers Talk!');
 }
+
+/**
+ * Author: Testers Talk
+ */
+export async function downloadAndValidateFileName(page: Page, Btn: string, fileName: string) {
+    const [download] = await Promise.all([
+        page.waitForEvent('download'),
+        page.getByRole('link', { name: Btn }).click()
+    ])
+
+    console.log('Downloaded filename : ' + download.suggestedFilename())
+    expect(download.suggestedFilename()).toBe(fileName)
+
+    if (download.suggestedFilename().includes('.xlsx')) {
+        await download.saveAs('./downloads/Downloaded_Excel_File.xlsx')
+    } else if (download.suggestedFilename().includes('.docx')) {
+        await download.saveAs('./downloads/Downloaded_Word_File.docx')
+    } else if (download.suggestedFilename().includes('.xml')) {
+        await download.saveAs('./downloads/Downloaded_XML_File.xml')
+    } else if (download.suggestedFilename().includes('.pdf')) {
+        await download.saveAs('./downloads/Downloaded_PDF_File.pdf')
+    }
+}

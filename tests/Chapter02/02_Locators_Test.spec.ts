@@ -18,7 +18,7 @@ test('Locators in Playwright', async ({ page }) => {
     // await page.getByAltText("View BakkappaN's full-sized avatar").click();
 
     // GetByTestId
-    // await page.getByTestId("projects").first().click();
+    await page.getByTestId("projects").first().click();
 
     // GetByText
     // await page.getByText("Sign up").click();

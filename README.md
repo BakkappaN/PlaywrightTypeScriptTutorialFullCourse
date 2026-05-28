@@ -8,9 +8,9 @@
 ## [Part04 : Learn Playwright with CI CD - Jenkins, Azure DevOps & GitHub Actions](https://www.youtube.com/watch?v=D44k45N6S58)
   [![Watch the video](https://img.youtube.com/vi/D44k45N6S58/hqdefault.jpg)](https://www.youtube.com/watch?v=D44k45N6S58)
 ## [Part05 : Complete Playwright MCP with Banking Project](https://www.youtube.com/watch?v=3Vk2mlX1XYM)
-  [![Watch the video](https://img.youtube.com/vi/D44k45N6S58/hqdefault.jpg)](https://www.youtube.com/watch?v=3Vk2mlX1XYM)
-## [Part06 : Complete File Upload, Download & File Content Validation(Excel, XML, Word & PDF) ](https://www.youtube.com/watch?v=3Vk2mlX1XYM)
-  [![Watch the video](https://img.youtube.com/vi/D44k45N6S58/hqdefault.jpg)](https://www.youtube.com/watch?v=3Vk2mlX1XYM)
+  [![Watch the video](https://img.youtube.com/vi/3Vk2mlX1XYM/hqdefault.jpg)](https://www.youtube.com/watch?v=3Vk2mlX1XYM)
+## [Part06 : Complete File Upload, Download & File Content Validation(Excel, XML, Word & PDF) ](https://www.youtube.com/watch?v=d4oPAKS7rOQ)
+  [![Watch the video](https://img.youtube.com/vi/d4oPAKS7rOQ/hqdefault.jpg)](https://www.youtube.com/watch?v=d4oPAKS7rOQ)
   
 - Playwright with TypeScript Full Course Playlist - https://youtube.com/playlist?list=PLUeDIlio4THEXmQxNvKmdDxAVloGTHXMr&feature=shared
 ===============================================================
